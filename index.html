@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css
+    "
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pokedex | KursatYG</title>
+  </head>
+  <body>
+    <h1>Pokédex</h1>
+    <div class="search">
+      <input class="search-input" type="text" placeholder="Name or Number" />
+      <button class="search-btn">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </div>
+
+    <div class="container">
+      <div class="sort">
+        <button class="mix-btn">
+          <i class="fa-solid fa-tornado"></i> Rastgele Sırala
+        </button>
+        <div class="select">
+          <label class="sort-by">Sırala </label>
+          <i class="fa-solid fa-angle-down"></i>
+          <ul class="sort-ul">
+            <li data-option="numberAsc">Büyükten Küçüğe ID</li>
+            <li data-option="numberDesc">Küçükten Büyüğe ID</li>
+            <li data-option="nameAsc">A'dan Z'ye İsim</li>
+            <li data-option="nameDesc">Z'den A'ya İsim</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="poke-container"></div>
+
+      <button class="all-btn">Daha fazla!</button>
+      <div class="loader-div" style="display: none">
+        <span class="loader show"></span>
+      </div>
+    </div>
+    <script type="module" src="api.js"></script>
+  </body>
+</html>
